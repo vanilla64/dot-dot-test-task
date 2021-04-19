@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/dot-dot-test-task/static/css/main.5fd097b7.chunk.css",
+    "main.js": "/dot-dot-test-task/static/js/main.44189cc4.chunk.js",
+    "main.js.map": "/dot-dot-test-task/static/js/main.44189cc4.chunk.js.map",
+    "runtime-main.js": "/dot-dot-test-task/static/js/runtime-main.f44c3eb6.js",
+    "runtime-main.js.map": "/dot-dot-test-task/static/js/runtime-main.f44c3eb6.js.map",
+    "static/js/2.8c3b300b.chunk.js": "/dot-dot-test-task/static/js/2.8c3b300b.chunk.js",
+    "static/js/2.8c3b300b.chunk.js.map": "/dot-dot-test-task/static/js/2.8c3b300b.chunk.js.map",
+    "index.html": "/dot-dot-test-task/index.html",
+    "static/css/main.5fd097b7.chunk.css.map": "/dot-dot-test-task/static/css/main.5fd097b7.chunk.css.map",
+    "static/js/2.8c3b300b.chunk.js.LICENSE.txt": "/dot-dot-test-task/static/js/2.8c3b300b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/dot-dot-test-task/static/media/bg-im-chckbox.cdf87894.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f44c3eb6.js",
+    "static/js/2.8c3b300b.chunk.js",
+    "static/css/main.5fd097b7.chunk.css",
+    "static/js/main.44189cc4.chunk.js"
+  ]
+}
