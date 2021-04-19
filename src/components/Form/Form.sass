@@ -1,0 +1,262 @@
+$redColor: #EF483E
+
+$mw728: 728px
+$mw425: 425px
+
+$time03s: .3s
+
+.form
+  width: 100%
+
+  &__fieldset
+    //width: 100%
+    border: none
+    padding: 0
+    margin: 0 0 40px
+    display: flex
+    flex-direction: column
+    &:last-child
+      margin: 0 0 16px
+    &:nth-child(3) > .form__input-container
+      margin: 0 0 16px
+
+  &__title
+    display: flex
+    align-items: center
+    margin: 0 0 21px
+
+  &__count
+    margin: 0 8px 0 0
+    width: 24px
+    height: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    background: $redColor
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+
+  &__count span
+    transform: translateY(2px)
+
+  &__text
+    margin: 0
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px
+    transform: translateY(2px)
+    transition: .3s
+    @media screen and (max-width: $mw728)
+      font-size: 20px
+      line-height: 24px
+
+  &__input-container
+    display: flex
+    width: 356px
+    justify-content: space-between
+    @media screen and (max-width: $mw728)
+      width: 100%
+
+  &__label
+    font-weight: normal
+    font-size: 13px
+    line-height: 16px
+    transition: $time03s
+    @media screen and (max-width: $mw425)
+      font-size: 11px
+      line-height: 12px
+
+    &_type_checkbox
+      display: flex
+      align-items: center
+      margin: 0 0 16px
+      @media screen and (max-width: $mw728)
+        width: 100%
+      & > .form__input-name
+        margin: 0
+    &_width_half
+      width: 49%
+    &_type_radio
+      margin: 0 0 4px
+      width: 100%
+      height: 44px
+      //padding: 0 10px 0 12px
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      background-color: #4B4B4F
+      position: relative
+
+      &:last-child
+        margin: 0
+    &_dir_row
+      margin: 0 0 16px
+      width: 100%
+      &:last-child
+        margin: 0
+
+  &__input-name
+    margin: 0 0 8px
+    overflow: hidden
+    white-space: nowrap
+
+  &__input
+    box-sizing: border-box
+    padding: 0 0 0 14px
+    height: 44px
+    border: none
+    display: flex
+    flex-direction: column
+    font-weight: normal
+    font-size: 15px
+    line-height: 18px
+    &:focus
+      outline: none
+    &::placeholder
+      color: #CFCFCF
+      font-weight: normal
+      font-size: 15px
+      line-height: 18px
+      //padding: 0 0 0 14px
+    &_type_address
+      position: relative
+      background: transparent
+      width: 97%
+      color: #CFCFCF
+      &:disabled,
+      &:disabled::placeholder
+        color: #818184
+
+    &_type_checkbox
+      height: 24px
+
+    &_width_full
+      width: 100%
+    &_width_half
+      width: 172px
+      margin: 8px 0 0
+      @media screen and (max-width: $mw728)
+        width: 100%
+    &:last-child
+      margin: 0
+
+  &__input-wrap
+    position: relative
+    color: #ffffff
+    width: calc(100% - 150px)
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      display: flex
+      width: 150px
+      height: 100%
+      background: linear-gradient(to right, transparent 20%, #4b4b4f 80%)
+      z-index: 3
+
+  &__where-text
+    margin: 0
+
+  &__distance-text
+    color: #cfcfcf
+    margin: 0
+
+  &__text-wrap
+    margin: 0 0 8px
+    font-size: 13px
+    line-height: 16px
+    color: #FFFFFF
+    display: flex
+    justify-content: space-between
+
+  &__input[type='radio'],
+  &__input[type='checkbox']
+    position: absolute
+    width: 1px
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+
+  &__input[type='radio']
+    &:checked + div
+      background-color: $redColor
+  &__input[type='checkbox']
+    &:checked
+      margin: 0 0 16px
+    &:checked + div
+      background-color: $redColor
+      border: 2px solid $redColor
+      background-image: url('/src/images/bg-im-chckbox.svg')
+      background-repeat: no-repeat
+      background-position: center
+
+  &__visible-checkbox
+    width: 24px
+    height: 24px
+    margin: 0 12px 0 0
+    border: 2px solid #FFFFFF
+    box-sizing: border-box
+    transition: .2s
+
+  &__visible-radio
+    margin: 0 0 0 12px
+    position: relative
+    width: 16px
+    height: 16px
+    box-sizing: border-box
+    border-radius: 50%
+    background-color: #FFFFFF
+    &:before
+      content: ''
+      position: absolute
+      top: 4px
+      left: 4px
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: #343539
+
+  &__btn
+    position: absolute
+    top: 10px
+    right: 10px
+    width: 119px
+    height: 24px
+    outline: none
+    border: none
+    background: #717174
+    border-radius: 2px
+    display: flex
+    padding: 4px 13px
+    justify-content: center
+    align-items: center
+    font-size: 13px
+    line-height: 13px
+    letter-spacing: 0.05em
+    color: #FFFFFF
+    &:disabled
+      background: #56565a
+      color: #818184
+
+  &__btn-text
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    font-weight: normal
+    transform: translateY(2px)
+
+  &__textarea
+    border: none
+    outline: none
+    box-sizing: border-box
+    width: 100%
+    height: 80px
+    padding: 13px 23px 13px 14px
+    &::placeholder
+      font-weight: normal
+      font-size: 15px
+      line-height: 18px
+      color: #CFCFCF
