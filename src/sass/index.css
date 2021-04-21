@@ -7,12 +7,18 @@
   box-sizing: border-box;
   color: #fff;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1240px) {
   .root {
-    padding: 20px 0 80px;
+    padding: 40px 0 37px;
+  }
+}
+@media screen and (max-width: 728px) {
+  .root {
+    padding: 20px 0 37px;
   }
 }
 .root .content {
+  position: relative;
   width: 728px;
 }
 @media screen and (max-width: 800px) {
@@ -107,10 +113,7 @@
   background: #EF483E;
   font-weight: bold;
   font-size: 16px;
-  line-height: 20px;
-}
-.form__count span {
-  transform: translateY(2px);
+  line-height: 10px;
 }
 .form__text {
   margin: 0;
@@ -130,6 +133,7 @@
   display: flex;
   width: 356px;
   justify-content: space-between;
+  transition: 0.3s;
 }
 @media screen and (max-width: 728px) {
   .form__input-container {
@@ -174,7 +178,21 @@
   background-color: #4B4B4F;
   position: relative;
 }
-.form__label_type_radio:last-child {
+.form__label_type_option {
+  font-size: 14px;
+  line-height: 17px;
+  height: 28px;
+  background-color: #fff;
+  color: #000;
+  padding: 0 0 0 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form__label_type_option:hover {
+  background: #EF483E;
+  color: #fff;
+}
+.form__label_type_option:last-child {
   margin: 0;
 }
 .form__label_dir_row {
@@ -225,8 +243,7 @@
   width: 100%;
 }
 .form__input_width_half {
-  width: 172px;
-  margin: 8px 0 0;
+  width: 100%;
 }
 @media screen and (max-width: 728px) {
   .form__input_width_half {
@@ -239,24 +256,52 @@
 .form__input-wrap {
   position: relative;
   color: #ffffff;
+  width: 100%;
+}
+.form__input-wrap_color_dark {
   width: calc(100% - 150px);
 }
-.form__input-wrap:before {
+.form__input-wrap_color_dark:before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   display: flex;
-  width: 150px;
+  width: 25%;
   height: 100%;
-  background: linear-gradient(to right, transparent 20%, #4b4b4f 80%);
+  background: linear-gradient(to right, rgba(75, 75, 79, 0.0001) 20%, #4B4B4F 80%);
   z-index: 3;
+}
+.form__input-wrap_color_light:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.0001) 20%, white 80%);
+  z-index: 3;
+}
+.form__input-wrap_width_half:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.0001) 20%, white 80%);
+  z-index: 3;
+}
+.form__option {
+  background: #fff;
 }
 .form__where-text {
   margin: 0;
 }
 .form__distance-text {
-  color: #cfcfcf;
+  color: #CFCFCF;
   margin: 0;
 }
 .form__text-wrap {
@@ -316,16 +361,18 @@
 }
 .form__btn {
   position: absolute;
+  z-index: 3;
   top: 10px;
   right: 10px;
   width: 119px;
   height: 24px;
   outline: none;
   border: none;
+  box-sizing: border-box;
   background: #717174;
   border-radius: 2px;
   display: flex;
-  padding: 4px 13px;
+  padding: 0;
   justify-content: center;
   align-items: center;
   font-size: 13px;
@@ -352,11 +399,86 @@
   height: 80px;
   padding: 13px 23px 13px 14px;
 }
+@media screen and (max-width: 1240px) {
+  .form__textarea {
+    margin: 0 0 40px;
+  }
+}
 .form__textarea::placeholder {
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
   color: #CFCFCF;
+}
+.form__option-label {
+  height: 44px;
+  width: 100%;
+  background: #fff;
+}
+.form__list {
+  position: absolute;
+  z-index: 5;
+  top: 44px;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.form__list_visible {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+}
+.form__dropdown-wrap {
+  position: relative;
+}
+.form__dropdown-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  position: absolute;
+  z-index: 4;
+  top: 14px;
+  right: 10px;
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+.form__dropdown-icon_up {
+  transform: rotate(0);
+}
+
+.tooltip {
+  padding: 24px;
+  width: 356px;
+  height: 102px;
+  box-sizing: border-box;
+  background: #4B4B4F;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 88px;
+  left: 745px;
+}
+@media screen and (max-width: 1240px) {
+  .tooltip {
+    position: static;
+  }
+}
+@media screen and (max-width: 728px) {
+  .tooltip {
+    width: 100%;
+    height: 100%;
+  }
+}
+.tooltip__text {
+  margin: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

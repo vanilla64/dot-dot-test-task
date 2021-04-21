@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title/Title";
 import Form from "../Form/Form";
+import Tooltip from "../Tooltip/Tooltip";
 
 function App() {
   return (
@@ -8,8 +9,8 @@ function App() {
       <section className="content">
         <Title title="FTL: Прямая машина" />
         <Form />
+        <Tooltip />
       </section>
-
     </div>
   );
 }
