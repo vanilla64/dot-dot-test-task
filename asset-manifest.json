@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dot-dot-test-task/static/css/main.bfe10353.chunk.css",
+    "main.css": "/dot-dot-test-task/static/css/main.b9654819.chunk.css",
     "main.js": "/dot-dot-test-task/static/js/main.89cd3ca7.chunk.js",
     "main.js.map": "/dot-dot-test-task/static/js/main.89cd3ca7.chunk.js.map",
     "runtime-main.js": "/dot-dot-test-task/static/js/runtime-main.f44c3eb6.js",
@@ -8,7 +8,7 @@
     "static/js/2.8c3b300b.chunk.js": "/dot-dot-test-task/static/js/2.8c3b300b.chunk.js",
     "static/js/2.8c3b300b.chunk.js.map": "/dot-dot-test-task/static/js/2.8c3b300b.chunk.js.map",
     "index.html": "/dot-dot-test-task/index.html",
-    "static/css/main.bfe10353.chunk.css.map": "/dot-dot-test-task/static/css/main.bfe10353.chunk.css.map",
+    "static/css/main.b9654819.chunk.css.map": "/dot-dot-test-task/static/css/main.b9654819.chunk.css.map",
     "static/js/2.8c3b300b.chunk.js.LICENSE.txt": "/dot-dot-test-task/static/js/2.8c3b300b.chunk.js.LICENSE.txt",
     "static/media/index.css": "/dot-dot-test-task/static/media/bg-im-chckbox.cdf87894.svg",
     "static/media/chevron-down.2172327c.svg": "/dot-dot-test-task/static/media/chevron-down.2172327c.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.f44c3eb6.js",
     "static/js/2.8c3b300b.chunk.js",
-    "static/css/main.bfe10353.chunk.css",
+    "static/css/main.b9654819.chunk.css",
     "static/js/main.89cd3ca7.chunk.js"
   ]
 }
